@@ -10,7 +10,6 @@ import {
   ExternalLink,
   Globe2,
   Github,
-  Mail,
   Network,
   Palette,
   Rocket,
@@ -473,15 +472,14 @@ const visitingCarePoints: IconCard[] = [
             <p class="mt-2 max-w-3xl text-sm leading-6 text-slate-600">
               백엔드 개발 역량과 DB 설계 경험을 바탕으로, 유지보수성과 운영 효율을 함께 고려하는 시스템을 개발하겠습니다.
             </p>
+            <p class="mt-3 text-sm font-semibold text-slate-700">
+              Email:
+              <a href="mailto:tmdwprpdla@gmail.com" class="text-slate-950 underline decoration-slate-300 underline-offset-4 hover:decoration-slate-950">
+                tmdwprpdla@gmail.com
+              </a>
+            </p>
           </div>
           <div class="flex flex-wrap gap-2">
-            <a
-              href="mailto:tmdwprpdla@gmail.com"
-              class="inline-flex h-10 items-center gap-2 rounded-lg bg-slate-950 px-4 text-sm font-semibold text-white"
-            >
-              <Mail class="h-4 w-4" />
-              Email
-            </a>
             <a
               href="https://github.com/Parkseungje"
               target="_blank"
