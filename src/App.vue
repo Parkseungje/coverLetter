@@ -213,12 +213,12 @@ const visitingCarePoints: IconCard[] = [
               <ArrowUpRight class="h-4 w-4" />
             </a>
             <a
-              href="https://chromewebstore.google.com/detail/recheck/kljjgjpegdgbodipcgmmfhjjeidjiagi"
+              href="https://velog.io/@psj0810/%ED%97%98%EB%82%9C%ED%95%9C-%EC%A3%BC%EB%8B%88%EC%96%B4%EA%B0%9C%EB%B0%9C%EC%9E%90%EB%A1%9C%EC%9D%98-%EA%B8%B8"
               target="_blank"
               rel="noreferrer"
               class="inline-flex h-11 items-center gap-2 rounded-lg border border-slate-200 bg-white px-4 text-sm font-semibold text-slate-800 transition hover:bg-slate-50"
             >
-              ReCheck 보기
+              개발 전환기 읽기
               <ExternalLink class="h-4 w-4" />
             </a>
           </div>
