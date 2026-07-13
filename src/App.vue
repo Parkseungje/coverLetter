@@ -370,9 +370,6 @@ const visitingCarePoints: IconCard[] = [
             <p class="text-sm font-semibold text-emerald-300">Side Projects</p>
             <h2 class="mt-2 text-2xl font-bold">실제로 만들고 운영한 서비스</h2>
           </div>
-          <p class="max-w-xl text-sm leading-6 text-white/65">
-            단순 학습용 프로젝트보다 실제 사용자가 있는 서비스를 직접 만들고 배포한 경험을 중심으로 정리했습니다.
-          </p>
         </div>
 
         <article class="mt-6 overflow-hidden rounded-lg border border-cyan-300/25 bg-white text-slate-950 shadow-xl shadow-cyan-950/20">
