@@ -178,7 +178,7 @@ const visitingCarePoints: IconCard[] = [
             Spring Boot · Vue3 · AI
           </p>
           <h1 class="mt-5 max-w-4xl text-3xl font-bold leading-tight text-slate-950 md:text-3xl">
-            협업을 파고들며 도메인 지식을
+            현업을 파고들며 도메인 지식을
             <span class="block">발굴하는 풀스택 개발자 박승제입니다.</span>
           </h1>
           <p class="mt-4 max-w-3xl text-base leading-7 text-slate-600 md:text-lg">
