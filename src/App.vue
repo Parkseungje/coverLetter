@@ -375,7 +375,7 @@ const recheckPoints = [
       <section id="contact" class="mt-5 mb-8 rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
         <div class="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
           <div>
-            <h2 class="text-2xl font-bold text-slate-950">운영까지 고려한 품질의 시스템을 만들겠습니다.</h2>
+            <h2 class="text-2xl font-bold text-slate-950">우수한 품질의 시스템을 개발하겠습니다.</h2>
             <p class="mt-2 max-w-3xl text-sm leading-6 text-slate-600">
               백엔드 개발 역량과 DB 설계 경험을 바탕으로, 유지보수성과 운영 효율을 함께 고려하는 시스템을 개발하겠습니다.
             </p>
