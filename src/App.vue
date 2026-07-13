@@ -27,7 +27,7 @@ type IconCard = {
 
 const profileItems = [
   { label: '경력', value: '5년차 풀스택 웹 개발자' },
-  { label: '주요 관심', value: 'AI주도개발 · 백엔드 · DB 설계 <br/> 운영 안정성 · 확장성' },
+  { label: '주요 관심', value: ['AI 주도 개발 · 백엔드 · DB 설계', '운영 안정성 · 확장성'] },
   { label: '프로젝트', value: 'ReCheck Chrome Extension 배포' },
 ];
 
@@ -42,7 +42,7 @@ const summaryHighlights = [
   },
   {
     label: '일하는 방식',
-    value: '문서주도개발 · 요구사항 검토 · 데이터 정합성 · 운영 리스크 확인',
+    value: '문서 주도 개발 · 요구사항 검토 · 데이터 정합성 · 운영 리스크 확인',
   },
 ];
 
@@ -50,13 +50,13 @@ const coreStrengths: IconCard[] = [
   {
     icon: Database,
     title: 'DB 설계와 정합성',
-    body: '실무 DB설계를 해본 개발자로써 틀에박힌 정규화로만 설계하지 않으며 향후 유지보수 효율화 관점에서 DB구조 변경 최소화를 고려해 확장성있는 설계를 합니다.',
+    body: '실무 DB 설계 경험을 바탕으로 틀에 박힌 정규화에만 머무르지 않고, 유지보수 효율과 구조 변경 최소화를 고려해 확장성 있는 설계를 지향합니다.',
     meta: 'Data integrity',
   },
   {
     icon: Workflow,
     title: '상태 전이 사고',
-    body: '상용 프로그램은 유즈케이스별, 업무 단계별 다양한 행동, 취소, 변경, 예외 케이스가 존재합니다. 이를 다각적 관점에서 함께 검토합니다.',
+    body: '상용 프로그램에는 유스케이스와 업무 단계별로 다양한 행동, 취소, 변경, 예외 케이스가 존재합니다. 이를 여러 관점에서 함께 검토합니다.',
     meta: 'State flow',
   },
   {
@@ -68,7 +68,7 @@ const coreStrengths: IconCard[] = [
   {
     icon: Users,
     title: '요구사항 검토',
-    body: '개발중인 프로그램을 항상 제 제품으로 생각하고 요구사항을 그대로 구현하기보다 데이터 구조와 운영 리스크 관점에서 효율적인 의견을 제시합니다.',
+    body: '개발 중인 프로그램을 내가 책임지는 제품으로 바라보고, 요구사항을 그대로 구현하기보다 데이터 구조와 운영 리스크 관점에서 의견을 제시합니다.',
     meta: 'Communication',
   },
 ];
@@ -92,7 +92,8 @@ const careerItems = [
     period: '4~5년차',
     title: 'Spring Boot/Vue 물류 포워딩 플랫폼',
     summary:
-      '단가, 노선, 예약, 입출고, 수출입 흐름을 구현하며 데이터 생명주기와 상태 전이를 고려해 개발했습니다. ' + 'CluadeCode를 활용해 기획문서를 바탕으로 개발하는 스펙주도개발(SDD)과 테스트주도개발(TDD)을 융합하여 진행하였습니다.  ',
+      '단가, 노선, 예약, 입출고, 수출입 흐름을 구현하며 데이터 생명주기와 상태 전이를 고려해 개발했습니다. ' +
+      'Claude Code를 활용해 기획 문서를 바탕으로 개발하는 스펙 주도 개발(SDD)과 테스트 주도 개발(TDD)을 함께 적용했습니다.',
     tags: ['Spring Boot', 'Vue', 'JPA', 'DB 설계', '물류'],
   },
 ];
@@ -101,17 +102,17 @@ const softSkills: IconCard[] = [
   {
     icon: Brain,
     title: '학습 태도',
-    body: '부족한 도메인 지식은 실무자와 적극적으로 소통하고 공부하여 빠르게 보완해왔으며 처음 활용하는 기술은 왜 사용하는지를 파고들며 흥미를 가지고 적극적으로 공부해 습득했습니다.',
+    body: '부족한 도메인 지식은 실무자와 적극적으로 소통하며 빠르게 보완해왔고, 처음 활용하는 기술은 왜 필요한지부터 파고들며 습득했습니다.',
   },
   {
     icon: Network,
     title: '구조적 사고',
-    body: '데이터 생명주기, 상태 변화, 후속 업무 영향을 먼저 확인하고 잦은 API 호출없이 효율적으로 데이터를 프론트엔드에 전달할 수 있게 백엔드를 개발합니다.',
+    body: '데이터 생명주기, 상태 변화, 후속 업무 영향을 먼저 확인하고, 불필요한 API 호출을 줄이면서 프론트엔드에 필요한 데이터를 효율적으로 전달하는 백엔드를 개발합니다.',
   },
   {
     icon: ShieldCheck,
     title: '책임감',
-    body: '프로그램의 성공이 곧 나의 성장이라고 믿으며 항상 개발하는 프로그램을 제 프로그램이라고 생각하고 개발 이후의 배포, 운영, 유지보수 흐름까지 고려해 작업하려고 노력합니다.',
+    body: '프로그램의 성공이 곧 나의 성장이라고 믿고, 개발 이후의 배포, 운영, 유지보수 흐름까지 고려해 작업하려고 노력합니다.',
   },
 ];
 
@@ -158,14 +159,14 @@ const recheckPoints = [
             <span class="block">발굴하는 풀스택 개발자 박승제입니다.</span>
           </h1>
           <p class="mt-4 max-w-3xl text-base leading-7 text-slate-600 md:text-lg">
-            금융 IT로 개발을 시작하여 동시접속자 5만명의 사이트 운영 및 배포 경험을 거쳐,
+            금융 IT로 개발을 시작해 동시 접속자 5만 명 규모의 사이트 운영 및 배포 경험을 거쳐,
             <br/>
             Spring Boot와 Vue3 기반
-            물류 포워딩 플랫폼을 개발,기획,설계한 경험이 있습니다.
+            물류 포워딩 플랫폼을 기획, 설계, 개발한 경험이 있습니다.
             <br/>
-            현재는 ClaudeCode, Codex 등 MCP를 연동하여 AI 에이전트를 효율적으로
+            현재는 Claude Code, Codex 등 MCP를 연동하여 AI 에이전트를 효율적으로
             <br/>
-            활용한 개발을 진행중입니다.
+            활용한 개발을 진행 중입니다.
           </p>
 
           <div class="mt-6 grid gap-3 md:grid-cols-3">
@@ -210,9 +211,9 @@ const recheckPoints = [
               <p class="text-sm font-semibold text-slate-500">Profile</p>
               <h2 class="mt-1 text-xl font-bold text-slate-950">5년차 웹 개발자</h2>
               <p class="mt-2 text-sm leading-6 text-slate-600">
-                - 온투업, 대부업 등 금융IT 개발<br/>
+                - 온투업, 대부업 등 금융 IT 개발<br/>
                 - 국내 10위권 커뮤니티 운영/배포<br/>
-                - 물류 포워딩 플랫폼 기획, 설계, 개발 연구 및 주도
+                - 물류 포워딩 플랫폼 기획, 설계, 개발 주도
               </p>
             </div>
           </div>
@@ -226,7 +227,12 @@ const recheckPoints = [
               class="rounded-lg border border-slate-100 bg-slate-50 p-3"
             >
               <dt class="text-xs font-semibold text-slate-500">{{ item.label }}</dt>
-              <dd class="mt-1 text-sm font-semibold leading-5 text-slate-900">{{ item.value }}</dd>
+              <dd class="mt-1 text-sm font-semibold leading-5 text-slate-900">
+                <template v-if="Array.isArray(item.value)">
+                  <span v-for="line in item.value" :key="line" class="block">{{ line }}</span>
+                </template>
+                <template v-else>{{ item.value }}</template>
+              </dd>
             </div>
             </dl>
           </div>
@@ -258,7 +264,7 @@ const recheckPoints = [
               <h2 class="mt-2 text-2xl font-bold text-slate-950">경력 흐름</h2>
             </div>
             <p class="max-w-md text-sm leading-6 text-slate-500">
-              단순 기능 구현을 했던 주니어 시절을 거쳐, 적극적으로 도메인을 이해하고 효율적인 유지보수를 위해 확장성을 고려한 설계를 할 줄 아는 개발자로 성장하였습니다. 현재는 AI MCP를 적극 활용하여 빠른 개발을 주도중입니다.
+              단순 기능 구현을 하던 주니어 시절을 거쳐, 도메인을 이해하고 유지보수성과 확장성을 고려해 설계하는 개발자로 성장했습니다. 현재는 AI와 MCP를 활용해 더 빠르고 일관된 개발 흐름을 만들고 있습니다.
             </p>
           </div>
 
@@ -369,9 +375,9 @@ const recheckPoints = [
       <section id="contact" class="mt-5 mb-8 rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
         <div class="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
           <div>
-            <h2 class="text-2xl font-bold text-slate-950">우수한 품질의 프로그램을 개발하겠습니다.</h2>
+            <h2 class="text-2xl font-bold text-slate-950">운영까지 고려한 품질의 시스템을 만들겠습니다.</h2>
             <p class="mt-2 max-w-3xl text-sm leading-6 text-slate-600">
-              백엔드 개발 역량, DB 설계 역량을 기반으로 효율적인 운영을 고려한 시스템을 개발하겠습니다.
+              백엔드 개발 역량과 DB 설계 경험을 바탕으로, 유지보수성과 운영 효율을 함께 고려하는 시스템을 개발하겠습니다.
             </p>
           </div>
           <div class="flex flex-wrap gap-2">
