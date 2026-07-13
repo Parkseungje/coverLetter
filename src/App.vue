@@ -8,7 +8,6 @@ import {
   Code2,
   Database,
   ExternalLink,
-  FileDown,
   Globe2,
   Github,
   Mail,
@@ -431,15 +430,26 @@ const visitingCarePoints: IconCard[] = [
               사용자가 인터넷에서 읽은 글을 바탕으로 AI가 질문과 힌트를 생성해, 글의 내용을
               실제로 이해했는지 다시 확인할 수 있도록 돕는 Chrome 확장 프로그램입니다.
             </p>
-            <a
-              href="https://chromewebstore.google.com/detail/recheck/kljjgjpegdgbodipcgmmfhjjeidjiagi"
-              target="_blank"
-              rel="noreferrer"
-              class="mt-5 inline-flex h-10 items-center gap-2 rounded-lg bg-white px-4 text-sm font-semibold text-slate-950 transition hover:bg-slate-100"
-            >
-              Chrome Web Store
-              <ExternalLink class="h-4 w-4" />
-            </a>
+            <div class="mt-5 flex flex-wrap gap-2">
+              <a
+                href="https://chromewebstore.google.com/detail/recheck/kljjgjpegdgbodipcgmmfhjjeidjiagi"
+                target="_blank"
+                rel="noreferrer"
+                class="inline-flex h-10 items-center gap-2 rounded-lg bg-white px-4 text-sm font-semibold text-slate-950 transition hover:bg-slate-100"
+              >
+                Chrome Web Store
+                <ExternalLink class="h-4 w-4" />
+              </a>
+              <a
+                href="https://velog.io/@psj0810/ReCheck-Chrome-%ED%99%95%EC%9E%A5-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8-%EA%B0%9C%EB%B0%9C-%ED%9A%8C%EA%B3%A0%EB%A1%9D"
+                target="_blank"
+                rel="noreferrer"
+                class="inline-flex h-10 items-center gap-2 rounded-lg border border-white/20 px-4 text-sm font-semibold text-white transition hover:bg-white/10"
+              >
+                개발 회고록
+                <ExternalLink class="h-4 w-4" />
+              </a>
+            </div>
           </div>
 
           <div class="grid gap-3 md:grid-cols-2">
@@ -482,11 +492,13 @@ const visitingCarePoints: IconCard[] = [
               GitHub
             </a>
             <a
-              href="#"
+              href="https://velog.io/@psj0810/posts"
+              target="_blank"
+              rel="noreferrer"
               class="inline-flex h-10 items-center gap-2 rounded-lg border border-slate-200 px-4 text-sm font-semibold text-slate-700"
             >
-              <FileDown class="h-4 w-4" />
-              Resume
+              <ExternalLink class="h-4 w-4" />
+              Blog
             </a>
           </div>
         </div>
