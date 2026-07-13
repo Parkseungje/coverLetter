@@ -30,7 +30,7 @@ type IconCard = {
 const profileItems = [
   { label: '경력', value: '5년차 풀스택 웹 개발자' },
   { label: '주요 관심', value: ['AI 주도 개발 · 백엔드 · DB 설계', '운영 안정성 · 확장성'] },
-  { label: '프로젝트', value: 'ReCheck Chrome Extension 배포' },
+  { label: '프로젝트', value: ['· 방문요양센터 홈페이지 운영 / 배포', '· ReCheck Chrome Extension 배포'] },
 ];
 
 const summaryHighlights = [
