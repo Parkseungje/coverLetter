@@ -9,9 +9,12 @@ import {
   Database,
   ExternalLink,
   FileDown,
+  Globe2,
   Github,
   Mail,
   Network,
+  Palette,
+  Rocket,
   ServerCog,
   ShieldCheck,
   Users,
@@ -122,6 +125,28 @@ const recheckPoints = [
   'API 비용과 사용자 데이터 통제를 고려한 개인 API 키 방식',
   'Chrome Web Store 배포 완료',
 ];
+const visitingCarePoints: IconCard[] = [
+  {
+    icon: Palette,
+    title: 'AI 협업 기반 UI/UX 개선',
+    body: 'Frontend Design, UI/UX Pro Max 스킬을 참고해 보호자 관점의 정보 위계, 모바일 CTA, 색상 대비, 섹션 흐름을 Codex와 반복 개선했습니다.',
+  },
+  {
+    icon: ServerCog,
+    title: 'Docker + GitHub Actions CI/CD',
+    body: '프론트엔드와 백엔드를 Docker 이미지로 빌드하고, GitHub Actions를 통해 Docker Hub에 자동 푸시되는 배포 흐름을 구성했습니다.',
+  },
+  {
+    icon: Database,
+    title: 'Vue3 + Spring Boot + MySQL',
+    body: '센터 소개, 공지사항, 갤러리, 상담 유도 흐름을 운영 가능한 화면으로 구성하고 MySQL 기반 데이터 흐름과 관리자 기능을 연결했습니다.',
+  },
+  {
+    icon: Globe2,
+    title: '실제 운영 서비스 배포',
+    body: '어머니가 실제 운영하는 방문요양센터 홈페이지를 개발해 가비아 호스팅 도메인과 운영 서버에 연결하고 shcare.co.kr에서 서비스 중입니다.',
+  },
+];
 </script>
 
 <template>
@@ -141,7 +166,7 @@ const recheckPoints = [
         <div class="hidden items-center gap-5 text-sm text-slate-600 md:flex">
           <a href="#career" class="hover:text-slate-950">경력</a>
           <a href="#strengths" class="hover:text-slate-950">강점</a>
-          <a href="#project" class="hover:text-slate-950">ReCheck</a>
+          <a href="#project" class="hover:text-slate-950">프로젝트</a>
           <a href="#contact" class="hover:text-slate-950">연락</a>
         </div>
       </nav>
@@ -340,6 +365,67 @@ const recheckPoints = [
       </section>
 
       <section id="project" class="mt-5 rounded-lg border border-slate-200 bg-slate-950 p-6 text-white shadow-sm md:p-7">
+        <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p class="text-sm font-semibold text-emerald-300">Side Projects</p>
+            <h2 class="mt-2 text-2xl font-bold">실제로 만들고 운영한 서비스</h2>
+          </div>
+          <p class="max-w-xl text-sm leading-6 text-white/65">
+            단순 학습용 프로젝트보다 실제 사용자가 있는 서비스를 직접 만들고 배포한 경험을 중심으로 정리했습니다.
+          </p>
+        </div>
+
+        <article class="mt-6 overflow-hidden rounded-lg border border-cyan-300/25 bg-white text-slate-950 shadow-xl shadow-cyan-950/20">
+          <div class="grid gap-0 lg:grid-cols-[0.9fr_1.1fr]">
+            <div class="bg-gradient-to-br from-cyan-50 via-white to-emerald-50 p-6 md:p-7">
+              <div class="flex items-center gap-3">
+                <span class="flex h-11 w-11 items-center justify-center rounded-lg bg-cyan-700 text-white">
+                  <Rocket class="h-5 w-5" />
+                </span>
+                <div>
+                  <p class="text-sm font-bold text-cyan-700">운영 배포 프로젝트</p>
+                  <h3 class="text-2xl font-bold text-slate-950">방문요양센터 홈페이지</h3>
+                </div>
+              </div>
+              <p class="mt-5 text-sm leading-7 text-slate-700">
+                어머니가 실제 운영하는 방문요양센터의 홍보 홈페이지를 Codex와 협업해 개발했습니다.
+                보호자가 필요한 정보를 빠르게 찾고 전화 상담까지 이어질 수 있도록 메인, 센터 소개,
+                공지사항, 갤러리, 상세 페이지의 UI/UX를 개선했고 현재 운영 배포 중입니다.
+              </p>
+              <div class="mt-5 flex flex-wrap gap-2">
+                <span class="rounded-full bg-white px-3 py-1 text-xs font-bold text-cyan-800 ring-1 ring-cyan-100">Vue3</span>
+                <span class="rounded-full bg-white px-3 py-1 text-xs font-bold text-cyan-800 ring-1 ring-cyan-100">Spring Boot</span>
+                <span class="rounded-full bg-white px-3 py-1 text-xs font-bold text-cyan-800 ring-1 ring-cyan-100">MySQL</span>
+                <span class="rounded-full bg-white px-3 py-1 text-xs font-bold text-cyan-800 ring-1 ring-cyan-100">Docker</span>
+                <span class="rounded-full bg-white px-3 py-1 text-xs font-bold text-cyan-800 ring-1 ring-cyan-100">GitHub Actions</span>
+                <span class="rounded-full bg-white px-3 py-1 text-xs font-bold text-cyan-800 ring-1 ring-cyan-100">Gabia</span>
+              </div>
+              <a
+                href="https://shcare.co.kr/"
+                target="_blank"
+                rel="noreferrer"
+                class="mt-6 inline-flex h-10 items-center gap-2 rounded-lg bg-slate-950 px-4 text-sm font-semibold text-white transition hover:bg-slate-800"
+              >
+                shcare.co.kr 보기
+                <ExternalLink class="h-4 w-4" />
+              </a>
+            </div>
+
+            <div class="grid gap-3 bg-slate-900 p-5 md:grid-cols-2 md:p-6">
+              <div
+                v-for="point in visitingCarePoints"
+                :key="point.title"
+                class="rounded-lg border border-white/10 bg-white/[0.06] p-4"
+              >
+                <component :is="point.icon" class="h-5 w-5 text-cyan-300" />
+                <h4 class="mt-3 text-sm font-bold text-white">{{ point.title }}</h4>
+                <p class="mt-2 text-sm leading-6 text-white/70">{{ point.body }}</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <div class="mt-4">
         <div class="grid gap-6 lg:grid-cols-[0.8fr_1.2fr]">
           <div>
             <p class="text-sm font-semibold text-emerald-300">Side Project</p>
@@ -369,6 +455,7 @@ const recheckPoints = [
               <p class="mt-3 text-sm leading-6 text-white/75">{{ point }}</p>
             </div>
           </div>
+        </div>
         </div>
       </section>
 
