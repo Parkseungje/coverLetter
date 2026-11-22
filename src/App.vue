@@ -4,19 +4,24 @@ import {
   ArrowUpRight,
   Brain,
   BriefcaseBusiness,
+  Calculator,
   CheckCircle2,
   Code2,
   Database,
   ExternalLink,
+  FlaskConical,
   Globe2,
   Github,
+  History,
   Network,
   Palette,
+  PiggyBank,
   Rocket,
   ServerCog,
   ShieldCheck,
   Users,
   Workflow,
+  Zap,
 } from 'lucide-vue-next';
 
 type IconCard = {
@@ -29,7 +34,14 @@ type IconCard = {
 const profileItems = [
   { label: '경력', value: '5년차 풀스택 웹 개발자' },
   { label: '주요 관심', value: ['AI 주도 개발 · 백엔드 · DB 설계', '운영 안정성 · 확장성'] },
-  { label: '프로젝트', value: ['· 방문요양센터 홈페이지 운영 / 배포', '· ReCheck Chrome Extension 배포'] },
+  {
+    label: '프로젝트',
+    value: [
+      '· 방문요양센터 홈페이지 운영 / 배포',
+      '· 벙비 계산기 개발 / 운영',
+      '· ReCheck Chrome Extension 배포',
+    ],
+  },
 ];
 
 const summaryHighlights = [
@@ -143,6 +155,39 @@ const visitingCarePoints: IconCard[] = [
     icon: Globe2,
     title: '실제 운영 서비스 배포',
     body: '어머니가 실제 운영하는 방문요양센터 홈페이지를 개발해 가비아 호스팅 도메인과 운영 서버에 연결하고 shcare.co.kr에서 서비스 중입니다.',
+  },
+];
+
+const bungbiPoints: IconCard[] = [
+  {
+    icon: Zap,
+    title: '저장 버튼이 없는 실시간 저장',
+    body: '숫자를 치는 대로 바로 저장되고, 저장 중인지 저장됐는지를 화면이 그때그때 알려줍니다. 술자리에서 버튼을 찾을 필요 없이 금액만 넣으면 그 자리에서 계산이 끝납니다.',
+  },
+  {
+    icon: History,
+    title: '지난 모임도 그대로 남습니다',
+    body: '모든 값을 DB에 저장해 두기 때문에 지난 날짜의 모임을 언제든 다시 열어 그때 누가 얼마를 냈는지 확인할 수 있습니다.',
+  },
+  {
+    icon: PiggyBank,
+    title: '운영비 0원으로 호스팅',
+    body: 'Supabase와 Vercel의 무료 플랜만으로 데이터베이스와 서버를 운영합니다. 비용을 늘리지 않으려고 함수 리전을 도쿄로 옮기고 화면 하나에 필요한 조회를 한 번으로 줄였으며, 무료 DB가 잠들지 않도록 하루 한 번 깨우는 cron을 두었습니다.',
+  },
+  {
+    icon: FlaskConical,
+    title: '정산 규칙은 순수 함수로',
+    body: 'React와 DB를 모르는 순수 함수에 계산 규칙을 모으고, 130여 개의 Vitest 테스트로 "걷는 돈은 영수증 총액을 넘지 않는다"는 불변식을 모든 입력 조합에서 검증합니다.',
+  },
+  {
+    icon: Database,
+    title: 'DB까지 내려간 불변식',
+    body: '같은 규칙을 Postgres 제약 트리거로도 막았습니다. 금액과 참여자를 나눠 쓰는 동안 생기는 중간 상태까지 검사되므로, 쓰는 순서를 금액 방향에 따라 바꿔 과다 징수가 남지 않게 했습니다.',
+  },
+  {
+    icon: ShieldCheck,
+    title: '로그인 없는 권한 모델',
+    body: '술자리에서 가입부터 시킬 수는 없어서, 모임을 만든 기기에만 남는 토큰으로 수정 권한을 가릅니다. 목록이 공개인 만큼 계좌번호 같은 민감 정보는 처음부터 저장하지 않았습니다.',
   },
 ];
 </script>
@@ -409,6 +454,74 @@ const visitingCarePoints: IconCard[] = [
             <div class="grid gap-3 bg-slate-900 p-5 md:grid-cols-2 md:p-6">
               <div
                 v-for="point in visitingCarePoints"
+                :key="point.title"
+                class="rounded-lg border border-white/10 bg-white/[0.06] p-4"
+              >
+                <component :is="point.icon" class="h-5 w-5 text-cyan-300" />
+                <h4 class="mt-3 text-sm font-bold text-white">{{ point.title }}</h4>
+                <p class="mt-2 text-sm leading-6 text-white/70">{{ point.body }}</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="mt-5 overflow-hidden rounded-lg border border-cyan-300/25 bg-white text-slate-950 shadow-xl shadow-cyan-950/20">
+          <div class="grid gap-0 lg:grid-cols-[0.9fr_1.1fr]">
+            <div class="bg-gradient-to-br from-cyan-50 via-white to-emerald-50 p-6 md:p-7">
+              <div class="flex items-center gap-3">
+                <span class="flex h-11 w-11 items-center justify-center rounded-lg bg-cyan-700 text-white">
+                  <Calculator class="h-5 w-5" />
+                </span>
+                <div>
+                  <p class="text-sm font-bold text-cyan-700">운영 배포 프로젝트</p>
+                  <h3 class="text-2xl font-bold text-slate-950">벙비 계산기</h3>
+                </div>
+              </div>
+              <p class="mt-5 text-sm leading-7 text-slate-700">
+                모임의 회비 정산을 자리에서 끝내려고 만든 서비스입니다. 차수마다 영수증 총액과
+                간 사람만 고르면 1인당 금액, 벙주가 메울 돈, 사람별로 보낼 돈과 돌려받을 돈이
+                계산되고, 카카오톡에 그대로 붙여넣을 정산 글까지 만들어 줍니다. 로그인 없이
+                모임을 만든 기기에만 수정 권한이 남으며, 실제 모임에서 쓰면서 계속 고쳐가고
+                있습니다.
+              </p>
+              <div class="mt-5 flex flex-wrap gap-2">
+                <span class="rounded-full bg-white px-3 py-1 text-xs font-bold text-cyan-800 ring-1 ring-cyan-100">Next.js</span>
+                <span class="rounded-full bg-white px-3 py-1 text-xs font-bold text-cyan-800 ring-1 ring-cyan-100">React</span>
+                <span class="rounded-full bg-white px-3 py-1 text-xs font-bold text-cyan-800 ring-1 ring-cyan-100">TypeScript</span>
+                <span class="rounded-full bg-white px-3 py-1 text-xs font-bold text-cyan-800 ring-1 ring-cyan-100">Supabase</span>
+                <span class="rounded-full bg-white px-3 py-1 text-xs font-bold text-cyan-800 ring-1 ring-cyan-100">PostgreSQL</span>
+                <span class="rounded-full bg-white px-3 py-1 text-xs font-bold text-cyan-800 ring-1 ring-cyan-100">Vitest</span>
+                <span class="rounded-full bg-white px-3 py-1 text-xs font-bold text-cyan-800 ring-1 ring-cyan-100">Vercel</span>
+              </div>
+              <div class="mt-5 grid grid-cols-3 gap-2">
+                <div class="rounded-lg border border-cyan-100 bg-white/70 p-3">
+                  <p class="text-xs font-semibold text-slate-500">운영비</p>
+                  <p class="mt-1 text-sm font-bold text-slate-900">월 0원</p>
+                </div>
+                <div class="rounded-lg border border-cyan-100 bg-white/70 p-3">
+                  <p class="text-xs font-semibold text-slate-500">저장</p>
+                  <p class="mt-1 text-sm font-bold text-slate-900">실시간 자동</p>
+                </div>
+                <div class="rounded-lg border border-cyan-100 bg-white/70 p-3">
+                  <p class="text-xs font-semibold text-slate-500">기록</p>
+                  <p class="mt-1 text-sm font-bold text-slate-900">지난 모임 보관</p>
+                </div>
+              </div>
+
+              <a
+                href="https://bungbi-calculator.vercel.app/"
+                target="_blank"
+                rel="noreferrer"
+                class="mt-6 inline-flex h-10 items-center gap-2 rounded-lg bg-slate-950 px-4 text-sm font-semibold text-white transition hover:bg-slate-800"
+              >
+                벙비 계산기 열어보기
+                <ExternalLink class="h-4 w-4" />
+              </a>
+            </div>
+
+            <div class="grid gap-3 bg-slate-900 p-5 md:grid-cols-2 md:p-6">
+              <div
+                v-for="point in bungbiPoints"
                 :key="point.title"
                 class="rounded-lg border border-white/10 bg-white/[0.06] p-4"
               >
